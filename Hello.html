@@ -1,0 +1,2522 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HackNova Summit 2026</title>
+
+<meta name="description"
+content="HackNova Summit 2026 - Build. Innovate. Impact.">
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#07080d;
+    color:#fff;
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button,
+input,
+select{
+    font-family:inherit;
+}
+
+:root{
+    --bg:#07080d;
+    --card:#10131c;
+    --card2:#151923;
+    --text:#f5f7ff;
+    --muted:#929aaa;
+    --purple:#7c5cff;
+    --cyan:#00e5ff;
+    --border:rgba(255,255,255,.09);
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container{
+    width:min(1120px,90%);
+    margin:auto;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(7,8,13,.82);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid var(--border);
+}
+
+.nav-container{
+    height:75px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:800;
+}
+
+.logo span{
+    color:var(--cyan);
+}
+
+.logo-icon{
+    margin-right:5px;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    color:#b8bfce;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:white;
+}
+
+.nav-register,
+.primary-btn{
+    border:0;
+    cursor:pointer;
+    padding:13px 22px;
+    border-radius:8px;
+    color:white;
+    font-weight:700;
+    background:linear-gradient(135deg,var(--purple),#4c8dff);
+    transition:.3s;
+}
+
+.nav-register:hover,
+.primary-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 35px rgba(124,92,255,.35);
+}
+
+.menu-btn{
+    display:none;
+    border:0;
+    background:none;
+    color:white;
+    font-size:27px;
+    cursor:pointer;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+    min-height:850px;
+    padding-top:150px;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-grid{
+    position:absolute;
+    inset:0;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        );
+
+    background-size:50px 50px;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    background:var(--purple);
+    filter:blur(180px);
+    opacity:.16;
+    top:-100px;
+    right:-200px;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:50px;
+    border:1px solid rgba(0,229,255,.25);
+    background:rgba(0,229,255,.06);
+    color:var(--cyan);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1px;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    max-width:900px;
+    font-size:clamp(50px,8vw,90px);
+    line-height:.98;
+    letter-spacing:-4px;
+}
+
+.hero h1 span{
+    color:var(--cyan);
+}
+
+.hero-description{
+    max-width:650px;
+    color:var(--muted);
+    font-size:18px;
+    margin-top:28px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:14px;
+    margin-top:35px;
+}
+
+.secondary-btn{
+    padding:13px 22px;
+    border:1px solid var(--border);
+    border-radius:8px;
+    transition:.3s;
+}
+
+.secondary-btn:hover{
+    background:rgba(255,255,255,.06);
+}
+
+.event-info{
+    display:flex;
+    gap:45px;
+    margin-top:70px;
+    flex-wrap:wrap;
+}
+
+.event-info div{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.event-info strong{
+    font-size:25px;
+}
+
+.event-info small{
+    display:block;
+    color:var(--muted);
+    font-size:9px;
+    letter-spacing:1px;
+}
+
+.event-info span{
+    font-size:14px;
+}
+
+
+/* =====================================================
+   COUNTDOWN
+===================================================== */
+
+.countdown-section{
+    padding:55px 0;
+    text-align:center;
+    background:#0b0d13;
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+}
+
+.countdown-title{
+    color:var(--muted);
+    font-size:11px;
+    letter-spacing:2px;
+    font-weight:700;
+}
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:20px;
+}
+
+.time-box{
+    min-width:110px;
+}
+
+.time-box span{
+    display:block;
+    font-size:45px;
+    font-weight:800;
+}
+
+.time-box small{
+    color:var(--muted);
+    font-size:10px;
+    letter-spacing:1px;
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+.section{
+    padding:120px 0;
+}
+
+.dark-section{
+    background:#0b0d13;
+}
+
+.section-label{
+    color:var(--cyan);
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.center-heading{
+    max-width:750px;
+    text-align:center;
+    margin:0 auto 60px;
+}
+
+.center-heading h2,
+.section-heading h2{
+    font-size:clamp(38px,5vw,60px);
+    line-height:1;
+    margin-top:15px;
+}
+
+.center-heading h2 span,
+.section-heading h2 span,
+.cta h2 span,
+.modal h2 span{
+    color:var(--cyan);
+}
+
+.center-heading p{
+    color:var(--muted);
+    margin-top:18px;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.section-heading{
+    display:grid;
+    grid-template-columns:1.3fr .7fr;
+    gap:70px;
+    align-items:end;
+    margin-bottom:60px;
+}
+
+.section-heading p{
+    color:var(--muted);
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.feature-card{
+    padding:35px;
+    border:1px solid var(--border);
+    background:var(--card);
+    border-radius:14px;
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-7px);
+    border-color:rgba(124,92,255,.5);
+}
+
+.feature-icon{
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.feature-card h3{
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.feature-card p{
+    color:var(--muted);
+}
+
+
+/* =====================================================
+   TRACKS
+===================================================== */
+
+.tracks{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+}
+
+.track{
+    padding:30px;
+    border:1px solid var(--border);
+    border-radius:12px;
+    background:rgba(255,255,255,.02);
+    transition:.3s;
+}
+
+.track:hover{
+    transform:translateY(-5px);
+    border-color:var(--purple);
+}
+
+.track-number{
+    color:var(--cyan);
+    font-size:11px;
+}
+
+.track h3{
+    margin:14px 0 8px;
+    font-size:21px;
+}
+
+.track p{
+    color:var(--muted);
+}
+
+
+/* =====================================================
+   SCHEDULE
+===================================================== */
+
+.schedule{
+    max-width:850px;
+    margin:auto;
+}
+
+.schedule-item{
+    display:grid;
+    grid-template-columns:170px 1fr;
+    gap:40px;
+    padding:30px 0;
+    border-bottom:1px solid var(--border);
+}
+
+.schedule-time{
+    color:var(--cyan);
+    font-size:11px;
+    font-weight:700;
+}
+
+.schedule-time strong{
+    display:block;
+    color:white;
+    margin-top:5px;
+}
+
+.schedule-content span{
+    color:var(--purple);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.schedule-content h3{
+    font-size:20px;
+    margin:7px 0;
+}
+
+.schedule-content p{
+    color:var(--muted);
+}
+
+
+/* =====================================================
+   SPEAKERS
+===================================================== */
+
+.speakers{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.speaker-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:25px;
+    transition:.3s;
+}
+
+.speaker-card:hover{
+    transform:translateY(-5px);
+}
+
+.speaker-image{
+    height:210px;
+    border-radius:9px;
+    display:grid;
+    place-items:center;
+    font-size:75px;
+    background:linear-gradient(
+        135deg,
+        rgba(124,92,255,.25),
+        rgba(0,229,255,.12)
+    );
+    margin-bottom:20px;
+}
+
+.speaker-card p{
+    color:var(--cyan);
+    font-size:13px;
+}
+
+.speaker-card small{
+    color:var(--muted);
+}
+
+
+/* =====================================================
+   PRIZES
+===================================================== */
+
+.prizes{
+    max-width:950px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    align-items:end;
+}
+
+.prize-card{
+    text-align:center;
+    padding:40px 25px;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:14px;
+}
+
+.prize-card.first{
+    padding:60px 25px;
+    border-color:var(--purple);
+}
+
+.medal{
+    font-size:50px;
+}
+
+.prize-card h3{
+    margin:10px 0;
+}
+
+.prize-card strong{
+    display:block;
+    font-size:35px;
+}
+
+.prize-card p{
+    color:var(--muted);
+    font-size:13px;
+}
+
+.winner-label{
+    color:var(--cyan);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+
+/* =====================================================
+   SPONSORS
+===================================================== */
+
+.sponsors{
+    padding:50px 0;
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+}
+
+.sponsors-title{
+    text-align:center;
+    color:var(--muted);
+    font-size:10px;
+    letter-spacing:2px;
+}
+
+.sponsor-list{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-top:25px;
+    color:#555d6e;
+    font-size:20px;
+    font-weight:800;
+}
+
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+.faq{
+    max-width:800px;
+    margin:auto;
+}
+
+.faq-item{
+    border-bottom:1px solid var(--border);
+}
+
+.faq-question{
+    width:100%;
+    padding:25px 0;
+    display:flex;
+    justify-content:space-between;
+    background:none;
+    border:0;
+    color:white;
+    cursor:pointer;
+    text-align:left;
+    font-size:17px;
+    font-weight:600;
+}
+
+.faq-question span{
+    color:var(--cyan);
+    font-size:25px;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:.35s;
+}
+
+.faq-answer p{
+    padding-bottom:25px;
+    color:var(--muted);
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta{
+    padding:80px 0 120px;
+}
+
+.cta-box{
+    text-align:center;
+    padding:90px 30px;
+    border:1px solid var(--border);
+    border-radius:20px;
+    background:radial-gradient(
+        circle at center,
+        rgba(124,92,255,.15),
+        transparent 60%
+    );
+}
+
+.cta h2{
+    font-size:clamp(40px,6vw,70px);
+    line-height:1;
+    margin:15px auto;
+}
+
+.cta p{
+    color:var(--muted);
+    margin-bottom:30px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+    border-top:1px solid var(--border);
+    padding:50px 0 20px;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.footer-content p{
+    color:var(--muted);
+    margin-top:10px;
+}
+
+.footer-links{
+    display:flex;
+    gap:25px;
+    color:var(--muted);
+    font-size:13px;
+}
+
+.copyright{
+    text-align:center;
+    color:#555d6e;
+    font-size:11px;
+    margin-top:50px;
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.modal{
+    position:fixed;
+    inset:0;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    background:rgba(0,0,0,.78);
+    backdrop-filter:blur(8px);
+    z-index:2000;
+    padding:20px;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-content{
+    width:min(500px,100%);
+    max-height:90vh;
+    overflow:auto;
+    position:relative;
+    background:#0d1018;
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:40px;
+}
+
+.close-modal{
+    position:absolute;
+    top:12px;
+    right:18px;
+    background:none;
+    border:0;
+    color:white;
+    font-size:32px;
+    cursor:pointer;
+}
+
+.modal h2{
+    font-size:35px;
+    margin-top:10px;
+}
+
+.modal-description{
+    color:var(--muted);
+    margin:10px 0 25px;
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+.form-group label{
+    display:block;
+    font-size:12px;
+    margin-bottom:7px;
+    color:#c4cad7;
+}
+
+.form-group input,
+.form-group select{
+    width:100%;
+    padding:13px;
+    background:#080a0f;
+    color:white;
+    border:1px solid var(--border);
+    border-radius:7px;
+    outline:none;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+    border-color:var(--purple);
+}
+
+.form-submit{
+    width:100%;
+    margin-top:10px;
+}
+
+.success-message{
+    display:none;
+    text-align:center;
+}
+
+.success-message.active{
+    display:block;
+}
+
+.success-icon{
+    width:70px;
+    height:70px;
+    margin:0 auto 20px;
+    display:grid;
+    place-items:center;
+    border-radius:50%;
+    background:rgba(0,229,255,.12);
+    color:var(--cyan);
+    font-size:35px;
+}
+
+
+/* =====================================================
+   TOAST
+===================================================== */
+
+.toast{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    padding:15px 20px;
+    border-radius:8px;
+    background:#151a25;
+    border:1px solid var(--border);
+    transform:translateY(120px);
+    transition:.3s;
+    z-index:3000;
+}
+
+.toast.show{
+    transform:translateY(0);
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+.reveal{
+    opacity:0;
+    transform:translateY(30px);
+    transition:opacity .7s ease,
+               transform .7s ease;
+}
+
+.reveal.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:850px){
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:75px;
+        left:0;
+        width:100%;
+        background:#080a10;
+        flex-direction:column;
+        padding:25px;
+        border-bottom:1px solid var(--border);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-register{
+        display:none;
+    }
+
+    .section-heading{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .features,
+    .speakers{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .prizes{
+        grid-template-columns:1fr;
+    }
+
+    .prize-card.first{
+        order:-1;
+    }
+
+    .sponsor-list{
+        justify-content:center;
+    }
+}
+
+
+@media(max-width:550px){
+
+    .hero{
+        min-height:750px;
+        padding-top:130px;
+    }
+
+    .hero h1{
+        font-size:48px;
+        letter-spacing:-2px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .event-info{
+        flex-direction:column;
+        gap:18px;
+    }
+
+    .countdown{
+        gap:8px;
+    }
+
+    .time-box{
+        min-width:65px;
+    }
+
+    .time-box span{
+        font-size:30px;
+    }
+
+    .features,
+    .tracks,
+    .speakers{
+        grid-template-columns:1fr;
+    }
+
+    .schedule-item{
+        grid-template-columns:1fr;
+        gap:10px;
+    }
+
+    .footer-content{
+        flex-direction:column;
+    }
+
+    .footer-links{
+        flex-wrap:wrap;
+    }
+
+    .modal-content{
+        padding:30px 20px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+<div class="container nav-container">
+
+<a href="#home" class="logo">
+⚡ Hack<span>Nova</span>
+</a>
+
+<nav class="nav-links" id="navLinks">
+
+<a href="#about">About</a>
+<a href="#schedule">Schedule</a>
+<a href="#speakers">Speakers</a>
+<a href="#prizes">Prizes</a>
+<a href="#faq">FAQ</a>
+
+</nav>
+
+<button
+class="nav-register"
+onclick="openModal()">
+Register Now
+</button>
+
+<button
+class="menu-btn"
+id="menuBtn">
+☰
+</button>
+
+</div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+<div class="hero-grid"></div>
+
+<div class="container hero-content">
+
+<div class="badge">
+🚀 INDIA'S NEXT-GEN HACKATHON
+</div>
+
+<h1>
+Build the Future.
+<span>Hack the Impossible.</span>
+</h1>
+
+<p class="hero-description">
+Join 500+ developers, designers, founders and creators
+for 48 hours of building, learning and innovation.
+</p>
+
+<div class="hero-buttons">
+
+<button
+class="primary-btn"
+onclick="openModal()">
+Register for Hackathon →
+</button>
+
+<a
+href="#schedule"
+class="secondary-btn">
+Explore Event
+</a>
+
+</div>
+
+
+<div class="event-info">
+
+<div>
+<strong>📅</strong>
+<span>
+<small>DATE</small>
+October 24–26, 2026
+</span>
+</div>
+
+<div>
+<strong>📍</strong>
+<span>
+<small>VENUE</small>
+New Delhi, India
+</span>
+</div>
+
+<div>
+<strong>⏱</strong>
+<span>
+<small>DURATION</small>
+48 Hours
+</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COUNTDOWN
+===================================================== -->
+
+<section class="countdown-section">
+
+<div class="container">
+
+<p class="countdown-title">
+THE HACKATHON STARTS IN
+</p>
+
+<div class="countdown">
+
+<div class="time-box">
+<span id="days">00</span>
+<small>DAYS</small>
+</div>
+
+<div class="time-box">
+<span id="hours">00</span>
+<small>HOURS</small>
+</div>
+
+<div class="time-box">
+<span id="minutes">00</span>
+<small>MINUTES</small>
+</div>
+
+<div class="time-box">
+<span id="seconds">00</span>
+<small>SECONDS</small>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="section" id="about">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div>
+
+<span class="section-label">
+01 — ABOUT
+</span>
+
+<h2>
+More than a hackathon.
+<span>It's a movement.</span>
+</h2>
+
+</div>
+
+<p>
+HackNova brings together brilliant minds to solve
+real-world problems using technology, creativity
+and collaboration.
+</p>
+
+</div>
+
+
+<div class="features">
+
+<div class="feature-card reveal">
+
+<div class="feature-icon">💡</div>
+
+<h3>Build</h3>
+
+<p>
+Turn your wildest ideas into working prototypes
+using cutting-edge technology.
+</p>
+
+</div>
+
+
+<div class="feature-card reveal">
+
+<div class="feature-icon">🤝</div>
+
+<h3>Collaborate</h3>
+
+<p>
+Meet developers, designers, founders and innovators
+from across the country.
+</p>
+
+</div>
+
+
+<div class="feature-card reveal">
+
+<div class="feature-icon">🌎</div>
+
+<h3>Impact</h3>
+
+<p>
+Create solutions that address meaningful problems
+and make a real-world difference.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TRACKS
+===================================================== -->
+
+<section class="section dark-section">
+
+<div class="container">
+
+<div class="center-heading">
+
+<span class="section-label">
+CHALLENGE TRACKS
+</span>
+
+<h2>
+Choose your <span>battlefield.</span>
+</h2>
+
+<p>
+Pick a problem you're passionate about and
+build something extraordinary.
+</p>
+
+</div>
+
+
+<div class="tracks">
+
+<div class="track reveal">
+
+<span class="track-number">01</span>
+
+<h3>🤖 AI & Machine Learning</h3>
+
+<p>
+Build intelligent systems that solve complex problems.
+</p>
+
+</div>
+
+
+<div class="track reveal">
+
+<span class="track-number">02</span>
+
+<h3>🌱 Climate Tech</h3>
+
+<p>
+Technology for a cleaner and more sustainable planet.
+</p>
+
+</div>
+
+
+<div class="track reveal">
+
+<span class="track-number">03</span>
+
+<h3>💰 FinTech</h3>
+
+<p>
+Reimagine finance, payments and financial inclusion.
+</p>
+
+</div>
+
+
+<div class="track reveal">
+
+<span class="track-number">04</span>
+
+<h3>🏥 HealthTech</h3>
+
+<p>
+Create technology that improves healthcare access.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SCHEDULE
+===================================================== -->
+
+<section class="section" id="schedule">
+
+<div class="container">
+
+<div class="center-heading">
+
+<span class="section-label">
+02 — SCHEDULE
+</span>
+
+<h2>
+48 hours of <span>building.</span>
+</h2>
+
+</div>
+
+
+<div class="schedule">
+
+<div class="schedule-item reveal">
+
+<div class="schedule-time">
+24 OCT
+<strong>09:00 AM</strong>
+</div>
+
+<div class="schedule-content">
+
+<span>OPENING</span>
+
+<h3>
+Registration & Opening Ceremony
+</h3>
+
+<p>
+Check-in, breakfast, team formation
+and opening keynote.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="schedule-item reveal">
+
+<div class="schedule-time">
+24 OCT
+<strong>12:00 PM</strong>
+</div>
+
+<div class="schedule-content">
+
+<span>BUILD</span>
+
+<h3>
+Hackathon Begins
+</h3>
+
+<p>
+The clock starts. Start building your idea.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="schedule-item reveal">
+
+<div class="schedule-time">
+25 OCT
+<strong>06:00 PM</strong>
+</div>
+
+<div class="schedule-content">
+
+<span>LEARN</span>
+
+<h3>
+Tech Workshops
+</h3>
+
+<p>
+Expert-led workshops covering AI,
+cloud, blockchain and product development.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="schedule-item reveal">
+
+<div class="schedule-time">
+26 OCT
+<strong>12:00 PM</strong>
+</div>
+
+<div class="schedule-content">
+
+<span>FINISH</span>
+
+<h3>
+Submission Deadline
+</h3>
+
+<p>
+Submit your project and prepare for judging.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="schedule-item reveal">
+
+<div class="schedule-time">
+26 OCT
+<strong>05:00 PM</strong>
+</div>
+
+<div class="schedule-content">
+
+<span>WIN</span>
+
+<h3>
+Final Demo & Awards
+</h3>
+
+<p>
+Final presentations, judging and winner announcements.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SPEAKERS
+===================================================== -->
+
+<section class="section dark-section" id="speakers">
+
+<div class="container">
+
+<div class="center-heading">
+
+<span class="section-label">
+03 — SPEAKERS
+</span>
+
+<h2>
+Learn from the <span>best.</span>
+</h2>
+
+</div>
+
+
+<div class="speakers">
+
+<div class="speaker-card reveal">
+
+<div class="speaker-image">
+👨‍💻
+</div>
+
+<h3>Arjun Mehta</h3>
+
+<p>AI Researcher</p>
+
+<small>Technology Expert</small>
+
+</div>
+
+
+<div class="speaker-card reveal">
+
+<div class="speaker-image">
+👩‍💻
+</div>
+
+<h3>Priya Sharma</h3>
+
+<p>Product Leader</p>
+
+<small>Tech Entrepreneur</small>
+
+</div>
+
+
+<div class="speaker-card reveal">
+
+<div class="speaker-image">
+👨‍🚀
+</div>
+
+<h3>Rahul Kapoor</h3>
+
+<p>Startup Founder</p>
+
+<small>Founder & Investor</small>
+
+</div>
+
+
+<div class="speaker-card reveal">
+
+<div class="speaker-image">
+👩‍🔬
+</div>
+
+<h3>Ananya Singh</h3>
+
+<p>Climate Scientist</p>
+
+<small>Sustainability Expert</small>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRIZES
+===================================================== -->
+
+<section class="section" id="prizes">
+
+<div class="container">
+
+<div class="center-heading">
+
+<span class="section-label">
+04 — PRIZES
+</span>
+
+<h2>
+Build big. <span>Win bigger.</span>
+</h2>
+
+<p>
+₹10,00,000+ in prizes, perks and opportunities.
+</p>
+
+</div>
+
+
+<div class="prizes">
+
+<div class="prize-card reveal">
+
+<div class="medal">
+🥈
+</div>
+
+<h3>2nd Place</h3>
+
+<strong>₹2,00,000</strong>
+
+<p>
++ Cloud credits + Mentorship
+</p>
+
+</div>
+
+
+<div class="prize-card first reveal">
+
+<div class="medal">
+🏆
+</div>
+
+<span class="winner-label">
+GRAND WINNER
+</span>
+
+<h3>1st Place</h3>
+
+<strong>₹5,00,000</strong>
+
+<p>
++ Incubation + Investor Pitch
+</p>
+
+</div>
+
+
+<div class="prize-card reveal">
+
+<div class="medal">
+🥉
+</div>
+
+<h3>3rd Place</h3>
+
+<strong>₹1,00,000</strong>
+
+<p>
++ Cloud credits + Mentorship
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SPONSORS
+===================================================== -->
+
+<section class="sponsors">
+
+<div class="container">
+
+<p class="sponsors-title">
+POWERED BY
+</p>
+
+<div class="sponsor-list">
+
+<span>TECHCORP</span>
+<span>CODELAB</span>
+<span>NEXUS</span>
+<span>CLOUDX</span>
+<span>INNOVATE</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FAQ
+===================================================== -->
+
+<section class="section" id="faq">
+
+<div class="container">
+
+<div class="center-heading">
+
+<span class="section-label">
+05 — FAQ
+</span>
+
+<h2>
+Got questions?
+<span>We've got answers.</span>
+</h2>
+
+</div>
+
+
+<div class="faq">
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+Who can participate?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+Anyone aged 18 or above can participate.
+Students, developers, designers, founders
+and technology enthusiasts are welcome.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+Do I need a team?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+No. You can register individually and
+find teammates during the team formation session.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+Is the hackathon free?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+Yes. Participation is completely free.
+Food, workspace and event swag are included.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+What should I bring?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+Bring your laptop, charger, ID and your
+best ideas. We'll take care of the rest.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta">
+
+<div class="container">
+
+<div class="cta-box">
+
+<span class="section-label">
+READY TO BUILD?
+</span>
+
+<h2>
+Your next big idea
+<span>starts here.</span>
+</h2>
+
+<p>
+Don't just watch the future happen.
+Build it.
+</p>
+
+<button
+class="primary-btn"
+onclick="openModal()">
+Register Now →
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-content">
+
+<div>
+
+<a href="#home" class="logo">
+⚡ Hack<span>Nova</span>
+</a>
+
+<p>
+Build. Innovate. Impact.
+</p>
+
+</div>
+
+
+<div class="footer-links">
+
+<a href="#about">About</a>
+<a href="#schedule">Schedule</a>
+<a href="#speakers">Speakers</a>
+<a href="#prizes">Prizes</a>
+<a href="#faq">FAQ</a>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 HackNova Summit.
+All rights reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     REGISTRATION MODAL
+===================================================== -->
+
+<div class="modal" id="registrationModal">
+
+<div class="modal-content">
+
+<button
+class="close-modal"
+onclick="closeModal()">
+×
+</button>
+
+
+<div id="registrationFormContainer">
+
+<span class="section-label">
+JOIN HACKNOVA
+</span>
+
+<h2>
+Register for the
+<span>Hackathon.</span>
+</h2>
+
+<p class="modal-description">
+Reserve your spot and start your journey.
+</p>
+
+
+<form id="registrationForm">
+
+
+<div class="form-group">
+
+<label>
+Full Name
+</label>
+
+<input
+type="text"
+id="name"
+placeholder="Your name"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Email Address
+</label>
+
+<input
+type="email"
+id="email"
+placeholder="you@example.com"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Phone Number
+</label>
+
+<input
+type="tel"
+id="phone"
+placeholder="+91 98765 43210"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Your Role
+</label>
+
+<select id="role" required>
+
+<option value="">
+Select your role
+</option>
+
+<option>
+Developer
+</option>
+
+<option>
+Designer
+</option>
+
+<option>
+Student
+</option>
+
+<option>
+Founder
+</option>
+
+<option>
+Other
+</option>
+
+</select>
+
+</div>
+
+
+<button
+class="primary-btn form-submit"
+type="submit">
+
+Complete Registration →
+
+</button>
+
+</form>
+
+</div>
+
+
+
+<div
+class="success-message"
+id="successMessage">
+
+<div class="success-icon">
+✓
+</div>
+
+<h2>
+You're registered!
+</h2>
+
+<p class="modal-description">
+Your HackNova registration has been received.
+</p>
+
+<button
+class="primary-btn"
+onclick="closeModal()">
+
+Done
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div class="toast" id="toast"></div>
+
+
+
+<script>
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const menuBtn =
+document.getElementById("menuBtn");
+
+const navLinks =
+document.getElementById("navLinks");
+
+
+menuBtn.addEventListener("click",function(){
+
+    navLinks.classList.toggle("active");
+
+    menuBtn.textContent =
+    navLinks.classList.contains("active")
+    ? "✕"
+    : "☰";
+
+});
+
+
+document.querySelectorAll(".nav-links a")
+.forEach(link=>{
+
+    link.addEventListener("click",function(){
+
+        navLinks.classList.remove("active");
+
+        menuBtn.textContent="☰";
+
+    });
+
+});
+
+
+
+/* =====================================================
+   COUNTDOWN
+===================================================== */
+
+const eventDate =
+new Date("October 24, 2026 09:00:00").getTime();
+
+
+function updateCountdown(){
+
+    const now =
+    new Date().getTime();
+
+    const difference =
+    eventDate-now;
+
+
+    if(difference<=0){
+
+        document.getElementById("days").textContent="00";
+        document.getElementById("hours").textContent="00";
+        document.getElementById("minutes").textContent="00";
+        document.getElementById("seconds").textContent="00";
+
+        return;
+
+    }
+
+
+    const days =
+    Math.floor(
+        difference/(1000*60*60*24)
+    );
+
+    const hours =
+    Math.floor(
+        (difference/(1000*60*60))%24
+    );
+
+    const minutes =
+    Math.floor(
+        (difference/(1000*60))%60
+    );
+
+    const seconds =
+    Math.floor(
+        (difference/1000)%60
+    );
+
+
+    document.getElementById("days")
+    .textContent=
+    String(days).padStart(2,"0");
+
+
+    document.getElementById("hours")
+    .textContent=
+    String(hours).padStart(2,"0");
+
+
+    document.getElementById("minutes")
+    .textContent=
+    String(minutes).padStart(2,"0");
+
+
+    document.getElementById("seconds")
+    .textContent=
+    String(seconds).padStart(2,"0");
+
+}
+
+
+updateCountdown();
+
+setInterval(updateCountdown,1000);
+
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+const modal =
+document.getElementById("registrationModal");
+
+
+function openModal(){
+
+    modal.classList.add("active");
+
+    document.body.style.overflow="hidden";
+
+}
+
+
+function closeModal(){
+
+    modal.classList.remove("active");
+
+    document.body.style.overflow="auto";
+
+}
+
+
+modal.addEventListener("click",function(e){
+
+    if(e.target===modal){
+
+        closeModal();
+
+    }
+
+});
+
+
+document.addEventListener("keydown",function(e){
+
+    if(e.key==="Escape"){
+
+        closeModal();
+
+    }
+
+});
+
+
+
+/* =====================================================
+   REGISTRATION
+===================================================== */
+
+const form =
+document.getElementById("registrationForm");
+
+
+form.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+
+    const name =
+    document.getElementById("name")
+    .value.trim();
+
+    const email =
+    document.getElementById("email")
+    .value.trim();
+
+    const phone =
+    document.getElementById("phone")
+    .value.trim();
+
+    const role =
+    document.getElementById("role")
+    .value;
+
+
+    if(!name || !email || !phone || !role){
+
+        showToast(
+            "Please complete all fields."
+        );
+
+        return;
+
+    }
+
+
+    const emailPattern =
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+    if(!emailPattern.test(email)){
+
+        showToast(
+            "Please enter a valid email."
+        );
+
+        return;
+
+    }
+
+
+    const registration={
+
+        id:Date.now(),
+
+        name:name,
+
+        email:email,
+
+        phone:phone,
+
+        role:role,
+
+        date:new Date()
+        .toLocaleString()
+
+    };
+
+
+    let registrations =
+    JSON.parse(
+        localStorage.getItem(
+            "hacknovaRegistrations"
+        )
+    ) || [];
+
+
+    registrations.push(registration);
+
+
+    localStorage.setItem(
+        "hacknovaRegistrations",
+        JSON.stringify(registrations)
+    );
+
+
+    document
+    .getElementById(
+        "registrationFormContainer"
+    )
+    .style.display="none";
+
+
+    document
+    .getElementById(
+        "successMessage"
+    )
+    .classList.add("active");
+
+
+    showToast(
+        "Registration successful! 🚀"
+    );
+
+
+    form.reset();
+
+});
+
+
+
+/* =====================================================
+   TOAST
+===================================================== */
+
+function showToast(message){
+
+    const toast =
+    document.getElementById("toast");
+
+    toast.textContent=message;
+
+    toast.classList.add("show");
+
+
+    setTimeout(()=>{
+
+        toast.classList.remove("show");
+
+    },3000);
+
+}
+
+
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+document
+.querySelectorAll(".faq-question")
+.forEach(question=>{
+
+    question.addEventListener("click",function(){
+
+        const answer =
+        this.nextElementSibling;
+
+        const icon =
+        this.querySelector("span");
+
+
+        document
+        .querySelectorAll(".faq-answer")
+        .forEach(other=>{
+
+            if(other!==answer){
+
+                other.style.maxHeight=null;
+
+            }
+
+        });
+
+
+        document
+        .querySelectorAll(".faq-question span")
+        .forEach(otherIcon=>{
+
+            if(otherIcon!==icon){
+
+                otherIcon.textContent="+";
+
+            }
+
+        });
+
+
+        if(answer.style.maxHeight){
+
+            answer.style.maxHeight=null;
+
+            icon.textContent="+";
+
+        }else{
+
+            answer.style.maxHeight =
+            answer.scrollHeight+"px";
+
+            icon.textContent="−";
+
+        }
+
+    });
+
+});
+
+
+
+/* =====================================================
+   SCROLL ANIMATION
+===================================================== */
+
+const observer =
+new IntersectionObserver(
+entries=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target
+            .classList
+            .add("visible");
+
+        }
+
+    });
+
+},
+{
+    threshold:.12
+});
+
+
+document
+.querySelectorAll(".reveal")
+.forEach(element=>{
+
+    observer.observe(element);
+
+});
+
+
+
+/* =====================================================
+   RESET REGISTRATION FORM WHEN MODAL REOPENS
+===================================================== */
+
+function resetRegistrationModal(){
+
+    document
+    .getElementById(
+        "registrationFormContainer"
+    )
+    .style.display="block";
+
+
+    document
+    .getElementById(
+        "successMessage"
+    )
+    .classList.remove("active");
+
+}
+
+
+const originalCloseModal =
+closeModal;
+
+
+window.closeModal=function(){
+
+    originalCloseModal();
+
+    setTimeout(
+        resetRegistrationModal,
+        300
+    );
+
+};
+
+
+/* =====================================================
+   CONSOLE
+===================================================== */
+
+console.log(
+    "⚡ HackNova Summit 2026 loaded successfully."
+);
+
+console.log(
+    "Registrations are stored in localStorage."
+);
+
+</script>
+
+</body>
+</html>
+```

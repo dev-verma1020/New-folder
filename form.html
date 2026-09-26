@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form </title>
+</head>
+<body>
+    <h1>
+        form page
+    </h1>
+    <form action="/submit.php">
+        <div>
+        <label for ="name">Name:</label>
+        <input id="name" type="text" placdeholder="enter your name">
+
+        <br>
+        <label for ="phone no."> Phone NO.</label>
+        <input id="phone no." type="tel" placeholder ="enter your phonenumber">
+        <br>
+        <label for=" email">Email</label>
+        <input id="email" type="email" placeholder="enter your email">
+        <br>
+        <label for="gender">Gender</label>
+        <select id="gender" required>
+            <option value="disabled">select</option>
+            <option value="male">Male</option>option>
+            <option value=" female">Female</option>
+            <option value=" other">Other</option>
+        </select>
+        <p>
+            subscription plan
+        </p>
+        <input id="basic" type="radio" name="subscription" value="basic">
+        <label for="basic">BASICS</label>
+        <input id=" standard" type="radio" name="subscription" value="standard">
+        <label for="standard">STANDARD</label>
+        <input id="premium" type="radio" name="subscription" value="premium">
+        <label for="premium">PREMIUM</label><br>
+        <button type="submit">submit</button>
+
+        
+        
+        </div>
+    </form>
+</body>
+</html>

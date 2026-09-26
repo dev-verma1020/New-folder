@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables in html</title>
+
+</head>
+<body>
+    <table>
+<thead><style>
+    
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Header */
+th {
+    background-color: #2563eb;
+    color: white;
+    padding: 14px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Table Cells */
+td {
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+/* Alternate Row Color */
+tr:nth-child(even) {
+    background-color: #f5f7fa;
+}
+
+/* Hover Effect */
+tr:hover {
+    background-color: #e8f0fe;
+    transition: 0.2s;
+}
+
+/* Rounded Corners */
+table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Responsive Table */
+@media (max-width: 600px) {
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+}
+</style>
+
+    <tr>
+        <th>name</th>
+        <th>salary</th>
+        <th>role</th>
+        <th>address</th>
+        <th>number of skills</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>John Doe</td>
+        <td>$50,000</td>
+        <td>Developer</td>
+        <td>123 Main St</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>Jane Smith</td>
+        <td>$60,000</td>
+        <td>Designer</td>
+        <td>456 Oak Ave</td>
+        <td>7</td>
+        <tr>
+            <td colspan="5"style="text-align: center;">Thank you!</td>
+        </tr>
+    </tr>
+</tbody>
+
+    </table>
+    
+</body>
+</html>
